@@ -1,0 +1,19 @@
+From: intrigeri <intrigeri@boum.org>
+Date: Fri, 19 Jul 2019 00:31:20 +0000
+Subject: Avoid unnecessary dependency on libz
+
+---
+ Makefile.PL | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+--- a/Makefile.PL
++++ b/Makefile.PL
+@@ -209,7 +209,7 @@
+         @{ $opts->{lib_links} } = map { $_ =~ s/32\b//g } @{ $opts->{lib_links} } if $Config{use64bitall};
+     }
+     else {
+-        push @{ $opts->{lib_links} }, qw( ssl crypto z );
++        push @{ $opts->{lib_links} }, qw( ssl crypto );
+ 
+         if (($Config{cc} =~ /aCC/i) && $^O eq 'hpux') {
+             print "*** Enabling HPUX aCC options (+e)\n";

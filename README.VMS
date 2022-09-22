@@ -1,0 +1,27 @@
+Building on OpenVMS
+======================
+You'll need to either build and install OpenSSL from source using the
+authoritative sources from openssl.org or install a PCSI kit from HPE or
+VSI.  Building against your own from-source installation currently uses
+SSL object libraries that will be statically linked into the
+Net::SSLeay shareable image.  That means no updates to SSL without
+updating Net::SSLeay.
+
+Building against a vendor installation gives you the possibility of SSL
+updates without rebuilding Net::SSLeay, assuming the upgrade is binary
+compatible, and also gets you the possibility of vendor support if you
+encounter a problem that is within the SSL libraries.  If you don't know
+what any of this means, just use whatever is already on your system (if
+anything) or install whatever is easiest.
+
+Once you've got a working installation of the SSL libraries, the steps
+to build Net::SSLeay on VMS are really the same as building any other
+package,and should look something like:
+
+ $ gzip -d Net-SSLeay-xx.xx.tar.gz
+ $ vmstar -xvf Net-SSLeay-xx.xx.tar
+ $ set default [.Net-SSLeay-xx_xx]
+ $ perl Makefile.PL
+ $ mmk
+ $ mmk test
+ $ mmk install
