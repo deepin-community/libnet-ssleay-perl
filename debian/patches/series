@@ -1,1 +1,2 @@
 20no-stray-libz-link.patch
+version_check_on_autopkgtest.patch

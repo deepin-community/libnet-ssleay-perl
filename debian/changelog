@@ -1,3 +1,39 @@
+libnet-ssleay-perl (1.92-2) unstable; urgency=medium
+
+  [ Simon Chopin ]
+  * New patch: Loosen the OpenSSL version checks on autopkgtests.
+    The test suite checks that the OPENSSL_version_*() calls match the
+    compile-time constants, which is reasonable in a unit test that is run in
+    the same time frame as the compilation, as is usually the case. However,
+    this check doesn't make as much sense in the autopkgtest context, where
+    the src:openssl package might have been updated for a bugfix release, for
+    instance.
+    (Closes: #1010795, LP: #1972795)
+
+  [ gregor herrmann ]
+  * Declare compliance with Debian Policy 4.6.1.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 15 May 2022 00:18:05 +0200
+
+libnet-ssleay-perl (1.92-1) unstable; urgency=medium
+
+  * Import upstream version 1.92.
+  * Upload to unstable.
+  * Refresh 20no-stray-libz-link.patch (offset).
+  * Update years of packaging copyright.
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 13 Jan 2022 19:47:44 +0100
+
+libnet-ssleay-perl (1.91.01-1) experimental; urgency=medium
+
+  * Import upstream development release 1.91_01.
+    Adds OpenSSL3 support (LP: #1945811)
+  * Update build dependencies.
+  * Refresh 20no-stray-libz-link.patch (offset).
+  * Upload to experimental.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 13 Nov 2021 18:08:00 +0100
+
 libnet-ssleay-perl (1.90-1) unstable; urgency=medium
 
   [ gregor herrmann ]
