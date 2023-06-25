@@ -8,7 +8,7 @@ Subject: Avoid unnecessary dependency on libz
 
 --- a/Makefile.PL
 +++ b/Makefile.PL
-@@ -209,7 +209,7 @@
+@@ -295,7 +295,7 @@
          @{ $opts->{lib_links} } = map { $_ =~ s/32\b//g } @{ $opts->{lib_links} } if $Config{use64bitall};
      }
      else {
