@@ -1,3 +1,35 @@
+libnet-ssleay-perl (1.94-3) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Sebastian Andrzej Siewior ]
+  * tests: Address another formatting difference in OpenSSL 3.4.1 (closes:
+    #1096245).
+
+ -- Colin Watson <cjwatson@debian.org>  Wed, 19 Feb 2025 12:30:54 +0000
+
+libnet-ssleay-perl (1.94-2) unstable; urgency=medium
+
+  [ Sebastian Andrzej Siewior ]
+  * test: 32_x509_get_cert_info allow single colon.
+    Starting with 3.4.0 the double colon in emailAddress has been removed.
+    Adapt the test to allow a single colon in 3.4.0 and later.
+    (Closes: #1085222)
+
+  [ gregor herrmann ]
+  * Declare compliance with Debian Policy 4.7.0.
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 23 Oct 2024 22:52:25 +0200
+
+libnet-ssleay-perl (1.94-1) unstable; urgency=medium
+
+  * Import upstream version 1.94.
+  * Refresh 20no-stray-libz-link.patch (offset).
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 4.6.2.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 20 Jan 2024 04:03:23 +0100
+
 libnet-ssleay-perl (1.92-2) unstable; urgency=medium
 
   [ Simon Chopin ]

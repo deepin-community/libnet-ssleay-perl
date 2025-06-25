@@ -1,2 +1,4 @@
 20no-stray-libz-link.patch
 version_check_on_autopkgtest.patch
+test-32_x509_get_cert_info-allow-single-colon.patch
+test-32_x509_get_cert_info-openssl-3.4.1.patch
